@@ -5,11 +5,15 @@ export const navItems = [
     },
     {
         route: "/blogs",
-        title: "Blogs"
+        title: "All Blogs"
     },
     {
         route: "/addPost",
         title: "Add Post"
+    },
+    {
+        route: "/profile",
+        title: "My Posts"
     },
     {
         route: "/about",
@@ -19,8 +23,4 @@ export const navItems = [
         route: "/login",
         title: "Log In"
     },
-    {
-        route: "/profile",
-        title: "User Profile"
-    }
 ]

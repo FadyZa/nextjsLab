@@ -4,7 +4,6 @@ import SideBar from '../../components/sideBar/sideBar';
 import clientPromise from '@/lib/mongodb';
 
 
-export const revalidate = 5;
 
 export default async function BlogPage() {
 

@@ -4,7 +4,6 @@ import clientPromise from '@/lib/mongodb';
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 
-// Mongo paswword: Kmrh2JUWqjJgttcp
 
 export default async function page({ params }) {
 
@@ -32,12 +31,12 @@ export default async function page({ params }) {
     return (
         <div className='d-flex flex-column justify-content-center'>
             <div className='container d-flex justify-content-center pt-4'>
-                <Card key={post[0].id} img={post[0].img} title={post[0].title} body={post[0].body} tags={post[0].tags} reactions={post[0].reactions} views={post[0].views} cols={"col-12"} />
+                <Card key={post.id} img={post.img} title={post.title} body={post.body} tags={post.tags} reactions={post.reactions} views={post.views} cols={"col-12"} />
             </div>
 
             <div className='d-flex justify-content-evenly mt-4'>
-                <button className='btn btn-primary px-5 py-2 text-capitalize'><Link href={`/blogs/${post[0].id - 1}`} className={`btn btn-primary ${post[0].id == 1 && "disabled"}`}>prev</Link></button>
-                <button className='btn btn-primary px-5 py-2 text-capitalize'><Link href={`/blogs/${post[0].id + 1}`} className={`btn btn-primary ${post[0].id == 30 && "disabled"}`}>next</Link></button>
+                <button className='btn btn-primary px-5 py-2 text-capitalize'><Link href={`/blogs/${post.id - 1}`} className={`btn btn-primary ${post.id == 1 && "disabled"}`}>prev</Link></button>
+                <button className='btn btn-primary px-5 py-2 text-capitalize'><Link href={`/blogs/${post.id + 1}`} className={`btn btn-primary ${post.id == 30 && "disabled"}`}>next</Link></button>
             </div>
         </div>
 

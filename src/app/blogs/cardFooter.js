@@ -1,9 +1,6 @@
 "use client";
-
-import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
 import React, { Fragment, useState } from 'react'
+import { FaThumbsDown, FaThumbsUp } from 'react-icons/fa';
 
 export default function CardFooter({ reactions }) {
 
@@ -51,14 +48,16 @@ export default function CardFooter({ reactions }) {
             <div className="card-footer text-body-secondary d-flex justify-content-evenly align-items-center">
                 <div className='d-flex align-items-center gap-2'>
                     <h5 className='p-0 m-0'>{likes}</h5>
-                    <FontAwesomeIcon icon={faThumbsUp} size='2x' style={{ cursor: "pointer" }} className={`${isLiked && "text-primary"}`} onClick={(e) => handleLikes(e)} />
+                    <FaThumbsUp
+                        style={{ cursor: "pointer" }} className={`${isLiked && "text-primary"}`} onClick={(e) => handleLikes(e)} />
 
                 </div>
                 <span>|</span>
                 <div className='d-flex align-items-center gap-2'>
                     <h5 className='p-0 m-0'>{dislikes}</h5>
 
-                    <FontAwesomeIcon icon={faThumbsDown} size='2x' style={{ cursor: "pointer" }} className={`${isDisLiked && "text-danger"}`} onClick={(e) => handleDisLikes(e)} />
+                    <FaThumbsDown style={{ cursor: "pointer" }} className={`${isDisLiked && "text-danger"}`} onClick={(e) => handleDisLikes(e)} />
+
                 </div>
             </div>
 

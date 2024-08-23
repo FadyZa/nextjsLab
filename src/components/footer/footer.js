@@ -1,5 +1,4 @@
-import { faFacebook, faGithub, faGoogle, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import React from 'react'
 
@@ -10,7 +9,7 @@ export default function Footer() {
 
             <div className="text-center p-4 bg-dark text-white" >
                 © ITI 2024 Copyright:
-                <a className="text-reset fw-bold" href="#"> FadyMalak</a>
+                <a className="text-reset fw-bold" target="_blank" href="https://www.linkedin.com/in/fady-malak-zaki/"> FadyMalak</a>
             </div>
 
             <section className="d-flex justify-content-center justify-content-between p-4 border-top">
@@ -19,22 +18,13 @@ export default function Footer() {
                 </div>
                 <div>
                     <a href="" className="me-4 text-reset">
-                        <FontAwesomeIcon icon={faFacebook} />
+                        <FaFacebook className="fs-4" />
                     </a>
-                    <a href="" className="me-4 text-reset">
-                        <FontAwesomeIcon icon={faTwitter} />
+                    <a target="_blank" href="https://www.linkedin.com/in/fady-malak-zaki/" className="me-4 text-reset">
+                        <FaLinkedin className="fs-4" />
                     </a>
-                    <a href="" className="me-4 text-reset">
-                        <FontAwesomeIcon icon={faGoogle} />
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <FontAwesomeIcon icon={faGithub} />
+                    <a target="_blank" href="https://github.com/FadyZa" className="me-4 text-reset">
+                        <FaGithub className="fs-4" />
                     </a>
                 </div>
             </section>
